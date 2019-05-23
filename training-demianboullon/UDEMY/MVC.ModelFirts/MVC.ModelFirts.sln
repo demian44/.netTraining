@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.ModelFirts", "MVC.ModelFirts\MVC.ModelFirts.csproj", "{1E70E446-D998-440B-8B15-12999F591510}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E70E446-D998-440B-8B15-12999F591510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E70E446-D998-440B-8B15-12999F591510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E70E446-D998-440B-8B15-12999F591510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E70E446-D998-440B-8B15-12999F591510}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81B9F13B-99FA-4B27-9BC9-BF9FB87467D5}
+	EndGlobalSection
+EndGlobal
