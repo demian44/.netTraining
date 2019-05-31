@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Injection1", "Injection1\Injection1.csproj", "{5257B3CF-7905-41CF-AC39-5C2883304CE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Entities\Models.csproj", "{B0DB2CCE-EE21-4476-A52D-D210947AB215}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{104CA278-0D96-464D-9F5B-CAF27827A932}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5257B3CF-7905-41CF-AC39-5C2883304CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5257B3CF-7905-41CF-AC39-5C2883304CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5257B3CF-7905-41CF-AC39-5C2883304CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5257B3CF-7905-41CF-AC39-5C2883304CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0DB2CCE-EE21-4476-A52D-D210947AB215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0DB2CCE-EE21-4476-A52D-D210947AB215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0DB2CCE-EE21-4476-A52D-D210947AB215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0DB2CCE-EE21-4476-A52D-D210947AB215}.Release|Any CPU.Build.0 = Release|Any CPU
+		{104CA278-0D96-464D-9F5B-CAF27827A932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{104CA278-0D96-464D-9F5B-CAF27827A932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{104CA278-0D96-464D-9F5B-CAF27827A932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{104CA278-0D96-464D-9F5B-CAF27827A932}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E74E2B1C-DDB9-4568-990E-ECB21283E0AC}
+	EndGlobalSection
+EndGlobal
