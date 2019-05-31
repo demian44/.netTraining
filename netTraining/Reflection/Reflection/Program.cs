@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Reflection;
 
 namespace Reflection
@@ -21,9 +19,15 @@ namespace Reflection
             // Call function to get and display the attribute.
             //GetAttribute(typeof(MainApp));
             //ViewInfo(new Dog().GetType());
-            var dog = new Dog { Age = 12, Name = "pepin" };
+            var dog = new Dog
+            {
+                Age = 12,
+                Name = "pepin"
+            };
+
             ViewFields(dog);
         }
+
         public static void ViewInfo(Type type)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -31,6 +35,7 @@ namespace Reflection
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Base: {0}", type.BaseType);
             Console.WriteLine("IsAbstract: {0}", type.IsAbstract);
+
             Console.ReadKey();
         }
 
@@ -46,18 +51,22 @@ namespace Reflection
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"{type}'s fields:");
             Console.ForegroundColor = ConsoleColor.White;
-            IEnumerable<string> fields = type.GetProperties().Select(x => x.Name); //En caso de que tenga atributos publicso
+            var fields = type.GetProperties().Select(x => x.Name); //En caso de que tenga atributos publicso
+
             foreach (string field in fields)
             {
                 Console.WriteLine(" - {0}", field);
             }
+
             Console.WriteLine("{0}'s properties:", type);
             Console.ForegroundColor = ConsoleColor.White;
-            IEnumerable<string> properties = from property in type.GetProperties() select property.Name; //En caso de que tenga atributos publicso
+            var properties = from property in type.GetProperties() select property.Name; //En caso de que tenga atributos publicso
+
             foreach (string property in properties)
             {
                 Console.WriteLine(" - {0}", property);
             }
+
             Console.ReadKey();
 
             Console.WriteLine("{0}'s methods:", type);
@@ -67,35 +76,31 @@ namespace Reflection
             {
                 Console.WriteLine(" - {0}", method);
             }
-            Console.ReadKey();
 
+            Console.ReadKey();
         }
     }
 
     public class Animal
     {
-
     }
+
     public class Dog : Animal
     {
-        private int age;
-        private string name;
-        public string race;
+        public string Race { get; set; }
 
-        public int Age { get => age; set => age = value; }
-        public string Name { get => name; set => name = value; }
+        public int Age { get; set; }
+
+        public string Name { get; set; }
     }
 
-    public class pet<T/*, U*/>
+    public class Pet<T/*, U*/>
     {
-        private T myObject;
-
-        public T MyObject { get => myObject; set => myObject = value; }
+        public T MyObject { get; set; }
 
         public void AnaliseType()
         {
-            MethodInfo method = this.myObject.GetType().GetMethod("Eat");
-
+            MethodInfo method = this.MyObject.GetType().GetMethod("Eat");
         }
     }
 }
