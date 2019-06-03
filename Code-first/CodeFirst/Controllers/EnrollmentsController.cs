@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using CodeFirst.DAL;
 using CodeFirst.Models;
 
-namespace Code_first.Controllers
+namespace CodeFirst.Controllers
 {
     public class EnrollmentsController : Controller
     {
