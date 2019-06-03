@@ -138,6 +138,7 @@
     <Compile Include="Models\ITest.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Test.cs" />
+    <Compile Include="Modules\TestModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
