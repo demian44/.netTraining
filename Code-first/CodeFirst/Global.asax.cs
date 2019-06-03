@@ -1,9 +1,11 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
 using CodeFirst.Controllers;
+using CodeFirst.Models;
 
 namespace CodeFirst
 {
@@ -12,15 +14,16 @@ namespace CodeFirst
         protected void Application_Start()
         {
             var builder = new ContainerBuilder();
+            builder.Register(x => new Test(Guid.NewGuid())).As<ITest>();
 
             // Register your MVC controllers. (MvcApplication is the name of
             // the class in Global.asax.)
-            builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
+            builder.RegisterControllers(typeof(MvcApplication).Assembly);
             // ...or you can register individual controlllers manually.
-            builder.RegisterType<HomeController>().InstancePerRequest();
-            builder.RegisterType<StudentsController>().InstancePerRequest();
-            builder.RegisterType<EnrollmentsController>().InstancePerRequest();
+            //builder.RegisterType<HomeController>().InstancePerRequest();
+            //builder.RegisterType<StudentsController>().InstancePerRequest();
+            //builder.RegisterType<EnrollmentsController>().InstancePerRequest();
 
             // OPTIONAL: Register model binders that require DI.
             builder.RegisterModelBinders(typeof(MvcApplication).Assembly);

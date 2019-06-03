@@ -135,7 +135,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Enrollment.cs" />
+    <Compile Include="Models\ITest.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
