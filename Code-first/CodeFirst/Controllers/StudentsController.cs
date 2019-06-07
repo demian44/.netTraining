@@ -9,12 +9,19 @@ namespace CodeFirst.Controllers
 {
     public class StudentsController : Controller
     {
-        private AppContext db = new AppContext();
+        private AppContext _db = new AppContext();
+        private readonly ITest _test;
+
+        public StudentsController(
+            ITest test)
+        {
+            _test = test;
+        }
 
         // GET: Students
         public ActionResult Index()
         {
-            return View(db.DbStudent.ToList());
+            return View(_db.DbStudent.ToList());
         }
 
         // GET: Students/Details/5
@@ -24,11 +31,13 @@ namespace CodeFirst.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.DbStudent.Find(id);
+
+            Student student = _db.DbStudent.Find(id);
             if (student == null)
             {
                 return HttpNotFound();
             }
+
             return View(student);
         }
 
@@ -47,8 +56,8 @@ namespace CodeFirst.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.DbStudent.Add(student);
-                db.SaveChanges();
+                _db.DbStudent.Add(student);
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -62,7 +71,8 @@ namespace CodeFirst.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.DbStudent.Find(id);
+
+            Student student = _db.DbStudent.Find(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -79,10 +89,11 @@ namespace CodeFirst.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(student).State = EntityState.Modified;
-                db.SaveChanges();
+                _db.Entry(student).State = EntityState.Modified;
+                _db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
             return View(student);
         }
 
@@ -93,11 +104,14 @@ namespace CodeFirst.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.DbStudent.Find(id);
+
+            Student student = _db.DbStudent.Find(id);
+
             if (student == null)
             {
                 return HttpNotFound();
             }
+
             return View(student);
         }
 
@@ -106,9 +120,10 @@ namespace CodeFirst.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Student student = db.DbStudent.Find(id);
-            db.DbStudent.Remove(student);
-            db.SaveChanges();
+            Student student = _db.DbStudent.Find(id);
+            _db.DbStudent.Remove(student);
+            _db.SaveChanges();
+
             return RedirectToAction("Index");
         }
 
@@ -116,8 +131,9 @@ namespace CodeFirst.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
+
             base.Dispose(disposing);
         }
     }
