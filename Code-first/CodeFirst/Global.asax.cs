@@ -3,7 +3,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
-using Code_first.App_Start;
+using CodeFirst.App_Start;
 
 namespace CodeFirst
 {

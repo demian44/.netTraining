@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Autofac;
-
+﻿using Autofac;
+using System;
 
 namespace AutofacOne
 {
@@ -22,7 +16,11 @@ namespace AutofacOne
                 builder.RegisterType(typeof(SpaceShip));
                 container = builder.Build();
             }
-            catch { throw new Exception("Container Exception"); }
+            catch
+            {
+                throw new Exception("Container Exception");
+            }
+
             return container;
         }
     }
@@ -45,6 +43,7 @@ namespace AutofacOne
         {
             this.color = color;
         }
+
         public void ChargeBattery()
         {
 

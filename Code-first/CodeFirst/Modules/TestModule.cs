@@ -2,7 +2,7 @@
 using Autofac;
 using CodeFirst.Models;
 
-namespace Code_first.Modules
+namespace CodeFirst.Modules
 {
     public class TestModule: Module
     {
