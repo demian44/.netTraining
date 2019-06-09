@@ -132,6 +132,7 @@
     <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="DAL\AppContext.cs" />
     <Compile Include="DAL\AppInit.cs" />
+    <Compile Include="Filters\VerifySession.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

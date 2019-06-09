@@ -1,8 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
-using CodeFirst;
 
-namespace Code_first.App_Start
+namespace CodeFirst.App_Start
 {
     public class ContainerConfig
     {
